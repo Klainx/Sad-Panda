@@ -16,5 +16,5 @@ Chrome/Chromium extension to access ExHentai
 
 # Fix
 
-* Manifest version 2 depracated
+* Manifest version 2 depracated errors
  
