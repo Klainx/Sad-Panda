@@ -1,4 +1,4 @@
-# Sad-Panda
+# SadPanda
 Chrome/Chromium extension to access ExHentai
 
 # Instalation
