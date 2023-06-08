@@ -1,0 +1,63 @@
+{
+    "name": "Sad Panda",
+	"description": "Access to ExHentai",
+    "version": "3.1",
+	"manifest_version": 3,
+	"permissions": [
+        "contentSettings",
+        "notifications",
+        "cookies",
+        "tabs"
+    ],
+	"host_permissions": [
+        "*://e-hentai.org/*",
+        "*://*.e-hentai.org/*",
+        "*://exhentai.org/*"
+	],
+    "icons": {
+        "16": "/ico/16.png",
+        "32": "/ico/32.png",
+        "48": "/ico/48.png",
+        "64": "/ico/64.png",
+        "128": "/ico/128.png"
+    },
+	"background": {
+		"service_worker": "js/background.js"
+	},
+    "content_scripts": [
+        {
+            "matches": [
+                "*://exhentai.org/",
+                "*://exhentai.org/#"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/bootstrap.min.js",
+                "js/vue.min.js",
+                "js/vue-on-toast.min.js",
+                "js/login.js"
+            ],
+            "css": [
+                "css/bootstrap.min.css",
+                "css/vue-on-toast.min.css",
+                "css/login.css"
+            ]
+        },
+        {
+            "matches": [
+                "*://exhentai.org/*"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/logout.js"
+            ],
+            "css": [
+                "css/logout.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [{
+		"resources": ["/img/icon.png"],
+		"matches": []
+    }]
+}
